@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./TodoItem.module.css";
 
 function TodoItem (props) {
   const completedStyle = {
@@ -8,7 +9,7 @@ function TodoItem (props) {
   }
 
     return (
-            <div className = "todo-i"> {/** компонент возвращает два элемента, поэтому используем div, а не пустой тег, правильно же? */}
+            <div className = {styles.todoi}> {/** компонент возвращает два элемента, поэтому используем div, а не пустой тег, правильно же? */}
               <input 
                 type = "checkbox" 
                 checked = {props.item.completed} /** добавляем обработчик события*/

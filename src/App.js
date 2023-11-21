@@ -1,6 +1,7 @@
 import React from "react";
 import TodoItem from "./TodoItem.js";
 import todosData from "./todosData.js";
+import styles from "./App.module.css";
 
 const date = new Date();
 const options = {month: 'long', day: 'numeric', weekday: 'long'};
@@ -30,8 +31,8 @@ class App extends React.Component { /** здесь мы то, что храни�
     const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item} handleChange={this.handleChange}/>)
                                                                                                       /** свойство handleChange содержит ссылку на метод handleChange экземпляра App (об этом говорит this.), правильно же? */
     return (                          
-      <div className="todo">
-        <h1 className= "tod">Today <p className = "den">{dayOfWeek}</p></h1> {/** class является ключевым словом в JS, поэтому в React используется className, правильно же? */}
+      <div className={styles.todo}>
+        <h1 className={styles.tod}>Today <p className = {styles.den}>{dayOfWeek}</p></h1> {/** class является ключевым словом в JS, поэтому в React используется className, правильно же? */}
         {todoItems}
       </div>
     )
