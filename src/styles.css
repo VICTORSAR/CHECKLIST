@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../public/fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("../public/fonts/Lora/Lora-Regular.ttf");
+}
+
 body {
   background-color: #f5f9f9;
+  font-family: "Ubuntu";
 }

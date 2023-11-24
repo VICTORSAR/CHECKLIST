@@ -9,12 +9,12 @@ function TodoItem (props) {
   }
 
     return (
-            <div className = {styles.todoi}> {/** компонент возвращает два элемента, поэтому используем div, а не пустой тег, правильно же? */}
+            <div className = {styles.todoi}> 
               <input 
                 type = "checkbox" 
-                checked = {props.item.completed} /** добавляем обработчик события*/
-                onChange={() => props.handleChange(props.item.id)} /** вызываем метод handleChange в коде компонента и передаём ему id элемента */
-              /> {/** обработчик события onChange принимает объект события */}
+                checked = {props.item.completed} 
+                onChange={() => props.handleChange(props.item.id)} 
+              /> 
               <p style={props.item.completed ? completedStyle: null}>{props.item.name}</p>
             </div>            
     )
